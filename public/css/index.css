@@ -1,0 +1,393 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+/* Color principal (para encabezados y elementos destacados) */
+/* Color secundario (para botones y enlaces) */
+/* Fondo principal */
+/* Color de texto principal */
+/* Color de acento (para detalles o hover effects) */
+/* Mixin */
+/* Uso del mixin */
+
+.animate__animated {
+  animation-duration: var(--animate-duration) !important;
+  animation-fill-mode: both !important;
+}
+html, body {
+  overflow-x: hidden;
+}
+
+
+h1 {
+  color: #fff;
+  text-align: center;
+  align-content: center;
+}
+
+/* Estilos generales  section*/
+body {
+  font-family: 'Open Sans', arial, sans-serif;
+  color: #333;
+  font-size: 14px;
+}
+.projcard-container,
+.projcard-container * {
+  box-sizing: border-box;
+}
+.projcard-container {
+  margin: 50px auto;
+  width: 100%;
+  max-width: 1000px;
+}
+.projcard {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  font-size: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 21px -12px rgba(0, 0, 0, .66);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.projcard:hover {
+  box-shadow: 0 34px 32px -33px rgba(0, 0, 0, .18);
+  transform: translate(0px, -3px);
+}
+.projcard-img {
+  position: absolute;
+  height: 300px;
+  width: 400px;
+  top: 0;
+  left: 0;
+  transition: transform 0.2s ease;
+}
+.projcard-textbox {
+  position: absolute;
+  top: 7%;
+  bottom: 7%;
+  left: 430px;
+  width: calc(100% - 470px);
+  font-size: 17px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.projcard-description {
+  z-index: 10;
+  font-size: 15px;
+  color: whitesmoke;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Esto añade puntos suspensivos si el texto es demasiado largo */
+  height: auto;
+  max-height: 125px; /* Ajusta según el tamaño que prefieras */
+  line-height: 1.4; /* Espacio entre líneas para mejorar la legibilidad */
+  overflow-y: auto; /* Permite hacer scroll si el contenido excede la altura */
+}
+
+
+
+
+
+
+@media (min-width: 375px) {
+  header {
+    display: block;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background: linear-gradient(to bottom, #0d0e0e 97%, #000 3%);
+    box-shadow: inset;
+    padding: 10px 20px;
+  }
+  .navbar .brand-title {
+    font-size: 1.5rem;
+    color: white;
+  }
+  .navbar .custom-navbar-links ul {
+    display: flex;
+    list-style: none;
+  }
+  .navbar .custom-navbar-links li {
+    padding: 0px 20px;
+  }
+  .navbar .custom-navbar-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+  }
+  .navbar .custom-navbar-links .hidden {
+    display: none;
+  }
+  .navbar .custom-toggle-button {
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 400;
+    width: 30px;
+    height: 21px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+  .navbar .custom-toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+  .carousel-control-next, .carousel-control-prev {
+   position: absolute;
+   z-index: 0;
+  }
+  .carousel-inner, .carousel-item {
+    height: 100vh; /* La altura del carrusel será igual a la altura de la ventana */
+}
+  #caption-top-name h1{
+    font-size: 35px;
+    position: relative;
+    bottom: 70vh;
+  }
+  #caption-bot-name h1{
+    font-size: 35px;
+    position: relative;
+    bottom: 20vh;
+  }
+  .carousel-img {
+    width: 100vw;
+    height: 100vh; /* Limita la altura máxima para evitar que se agranden demasiado */
+    object-fit: cover; /* Asegura que las imágenes mantengan proporción sin distorsión */
+    object-position: center; /* Centra la imagen dentro del contenedor */
+
+}
+.projcard-container {
+  width: 90%;
+}
+.projcard {
+  height: auto;
+}
+.projcard-img {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.projcard-textbox {
+  display: none;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+}
+.projcard-innerbox:hover{
+  .projcard-textbox{
+  display: block;
+  color: white;
+  transition: 4s;
+}
+}
+}
+
+
+@media (max-width: 768px) {
+  .custom-toggle-button {
+    display: flex;
+  }
+  .custom-navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+  .custom-navbar-links ul {
+    flex-direction: column;
+  }
+  .custom-navbar-links li {
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+  }
+  .custom-navbar-links.active {
+    display: flex;
+  }
+  .projcard-container {
+    width: 90%;
+}
+.projcard {
+    height: auto;
+}
+.projcard-img {
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+.projcard-textbox {
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+}
+
+
+@media(min-width:768px){
+.carousel-img {
+  height: 100vh; 
+  
+}
+#caption-top-name h1{
+  font-size:45px;
+  position: relative;
+  bottom: 80vh;
+}
+#caption-bot-name h1{
+  font-size: 45px;
+  position: relative;
+  bottom: 25vh;
+}
+.projcard-img {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+.projcard-textbox {
+  font-size: 25px;
+}
+.projcard-tittle{
+  font-size: 38px;
+  font-weight: bold;
+}
+.projcard-description {
+
+  font-size: 18px;
+}
+}
+@media(min-width:1024px){
+  .carousel-img {
+    width: 100vw;
+    height: 100vh; 
+    object-fit: cover; /* Asegura que las imágenes mantengan proporción sin distorsión */
+    object-position: center;
+  }
+  #caption-top-name h1{
+    font-size:65px;
+    position: relative;
+    bottom: 25vh;
+  }
+  #caption-bot-name h1{
+    font-size: 65px;
+    position: relative;
+    bottom: 25vh;
+  }
+  .projcard-container {
+    width: 1000px;
+}
+
+.projcard-img {
+    width: 400px;
+    height: 300px;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+}
+.projcard-textbox {
+    left: 430px;
+    width: calc(100% - 470px);
+}
+
+  .projcard-textbox, .projcard-description{
+  display: block;
+  color: black;
+  transition: 4s;
+
+}
+.projcard-innerbox:hover{
+  .projcard-textbox{
+  display: block;
+  color: rgb(10, 10, 10);
+  transition: 4s;
+}
+}
+.projcard:hover {
+	box-shadow: 0 34px 32px -33px rgba(0, 0, 0, .18);
+	transform: translate(0px, -3px);
+}
+.projcard::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(-70deg, #424242, transparent 50%);
+	opacity: 0.07;
+}
+.projcard:nth-child(2n)::before {
+	background-image: linear-gradient(-250deg, #424242, transparent 50%);
+}
+.projcard:nth-child(2n) .projcard-img {
+	left: 600px;
+	right: 0;
+  clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+}
+.projcard:hover .projcard-img {
+	transform: scale(1.05) rotate(1deg);
+}
+.projcard:nth-child(2n) .projcard-textbox {
+	left: initial;
+	right: 430px;
+}
+/* .projcard-textbox::before,
+.projcard-textbox::after {
+	content: "";
+	position: absolute;
+	display: block;
+	background: #ff0000bb;
+	background: #fff;
+	top: -20%;
+	left: -55px;
+	height: 140%;
+	width: 60px;
+	transform: rotate(8deg);
+} */
+.projcard:nth-child(2n) .projcard-textbox::before {
+	display: none;
+}
+.projcard-textbox::after {
+	display: none;
+	left: initial;
+	right: -55px;
+}
+.projcard:nth-child(2n) .projcard-textbox::after {
+	display: block;
+}
+
+
+/* .projcard-blue { background-color: #0088FF; } */
+.projcard-blue::before { background-image: linear-gradient(-70deg, #0088FF, transparent 50%); }
+.projcard-blue:nth-child(2n)::before { background-image: linear-gradient(-250deg, #0088FF, transparent 50%); }
+/* .projcard-red { background-color: #D62F1F; } */
+.projcard-red::before { background-image: linear-gradient(-70deg, #D62F1F, transparent 50%); }
+.projcard-red:nth-child(2n)::before { background-image: linear-gradient(-250deg, #D62F1F, transparent 50%); }
+/* .projcard-green { background-color: #40BD00; } */
+.projcard-green::before { background-image: linear-gradient(-70deg, #40BD00, transparent 50%); }
+.projcard-green:nth-child(2n)::before { background-image: linear-gradient(-250deg, #40BD00, transparent 50%); }
+/* .projcard-customcolor { background-color: var(--projcard-color); } */
+.projcard-customcolor::before { background-image: linear-gradient(-70deg, var(--projcard-color), transparent 50%); }
+.projcard-customcolor:nth-child(2n)::before { background-image: linear-gradient(-250deg, var(--projcard-color), transparent 50%); }
+}
