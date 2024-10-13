@@ -1,0 +1,106 @@
+.card-container{
+    padding-top: 75px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 100%; /* Tarjetas ocupan 100% del ancho en pantallas pequeñas */
+    max-width: 350px; /* Máximo ancho de cada tarjeta */
+}
+
+.image-container {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.heart-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f39c12;
+    color: white;
+    border-radius: 50%;
+    padding: 8px;
+    font-size: 16px;
+}
+
+.card h3 {
+    margin: 15px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.description {
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* Media queries para hacer responsive el diseño */
+
+/* Pantallas pequeñas (min-width 375px) */
+@media (min-width: 375px) {
+    .card-container {
+        justify-content: space-around;
+    }
+
+    .card {
+        flex: 0 1 calc(100% - 40px); /* Tarjeta ocupa el 100% del ancho, menos el gap */
+    }
+}
+
+/* Pantallas medianas (min-width 786px) */
+@media (min-width: 786px) {
+    .card {
+        flex: 0 1 calc(50% - 40px); /* Cada tarjeta ocupa el 50% del ancho */
+    }
+}
+
+/* Pantallas grandes (min-width 1024px) */
+@media (min-width: 1024px) {
+    .card {
+        flex: 0 1 calc(33.333% - 40px); /* Cada tarjeta ocupa el 33.3% del ancho */
+    }
+
+    .card-container {
+        max-width: 1200px;
+        margin: 20px auto;
+    }
+
+    .card h3 {
+        font-size: 24px;
+    }
+
+    .price {
+        font-size: 26px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+}

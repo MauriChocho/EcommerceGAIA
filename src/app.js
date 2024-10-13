@@ -1,6 +1,7 @@
 const express= require("express");
 const app= express();
 const path= require("path");
+const fs= require("fs")
 
 app.use(express.static(path.join(__dirname,"../public")));
 app.set("views",  path.join(__dirname,"views"));
@@ -19,6 +20,7 @@ const productRouter= require("./routes/productRouter.js");
 app.use("/",mainRouter);
 
 app.use("/",productRouter);
+
 
 
 app.listen(8000,()=> console.log("Servidor en puerto 8000"));

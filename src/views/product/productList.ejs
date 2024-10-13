@@ -1,9 +1,63 @@
-<%- include("../partials/head", {tituloWeb: "Gaia|Productos"}); %>
+<%- include("../partials/head", {tituloWeb: "Gaia | Productos"}); %>
 <body>
 
   <%- include("../partials/header"); %>
     <main>
-        <h4 c="black">Soy el product LIst</h4>
+        <div class="card-container">
+        <% productos.forEach(producto => { %>
+            <div class="card">
+              <div class="image-container">
+                <img src="<%= producto.imagen %>" alt="<%= producto.nombre %>">
+                <span class="heart-icon">❤️</span>
+              </div>
+              <h3><%= producto.nombre %></h3>
+              <p class="price">$<%= producto.precio %> USD</p>
+              <p class="description"><%= producto.descripcion %></p>
+            </div>
+          <% }) %>
+        </div> 
+      <!--  <div class="card">
+            <div class="image-container">
+                <img src="/img/products/Acondicionador.png" alt="Acondicionador Solido">
+                <span class="heart-icon">❤️</span>
+            </div>
+            <h3>Acondicionador Sólido</h3>
+            <p class="price">$41.00 USD</p>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh.</p>
+        </div>
+
+        <div class="card">
+            <div class="image-container">
+                <img src="/img/products/carbonActivado.png" alt="Jabón Carbón Activado">
+                <span class="heart-icon">❤️</span>
+            </div>
+            <h3>Jabón Carbón Activado</h3>
+            <p class="price">$41.00 USD</p>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh.</p>
+        </div>
+
+        <div class="card">
+            <div class="image-container">
+                <img src="/img/products/ShampooSolido.png" alt="Shampoo Sólido">
+                <span class="heart-icon">❤️</span>
+            </div>
+            <h3>Shampoo Sólido</h3>
+            <p class="price">$41.00 USD</p>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh.</p>
+        </div>
+
+
+        <div class="card">
+          <div class="image-container">
+              <img src="/img/products/Acondicionador.png" alt="Acondicionador Solido">
+              <span class="heart-icon">❤️</span>
+          </div>
+          <h3>Acondicionador Sólido</h3>
+          <p class="price">$41.00 USD</p>
+          <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh.</p>
+      </div> -->
+      
+    </div>
     </main>
 
 </body>
