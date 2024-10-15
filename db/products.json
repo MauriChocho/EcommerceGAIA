@@ -1,25 +1,38 @@
-{
-    "productos": [
+ [
         {
             "id": 1,
             "nombre": "Shampoo sólido",
             "precio": 41.00,
             "descripcion": "Shampoo sólido natural hecho a mano con aceites esenciales.",
-            "imagen": "shampoo.jpg"
+            "imagen": "/img/products/ShampooSolido.png"
         },
         {
             "id": 2,
             "nombre": "Acondicionador sólido",
             "precio": 38.00,
             "descripcion": "Acondicionador sólido hidratante, ideal para todo tipo de cabello.",
-            "imagen": "acondicionador.jpg"
+            "imagen": "/img/products/Acondicionador.png"
         },
         {
             "id": 3,
             "nombre": "Velas de soja",
             "precio": 22.00,
             "descripcion": "Velas aromáticas hechas con cera de soja y aceites esenciales.",
-            "imagen": "velas.jpg"
+            "imagen": "/img/products/carbonActivado.png"
+        },
+        {
+            "id": 4,
+            "nombre": "Velas de soja",
+            "precio": 22.00,
+            "descripcion": "Velas aromáticas hechas con cera de soja y aceites esenciales.",
+            "imagen": "/img/products/carbonActivado.png"
+        },
+        {
+            "id": 5,
+            "nombre": "Velas de soja",
+            "precio": 22.00,
+            "descripcion": "Velas aromáticas hechas con cera de soja y aceites esenciales.",
+            "imagen": "/img/products/carbonActivado.png"
         }
     ]
-}
+

@@ -15,11 +15,17 @@ const mainRouter= require("./routes/mainRouter.js");
 
 const productRouter= require("./routes/productRouter.js");
 
+const userRouter= require("./routes/userRouter.js");
+
+
 
 
 app.use("/",mainRouter);
 
 app.use("/",productRouter);
+
+
+app.use("/",userRouter);
 
 
 

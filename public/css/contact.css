@@ -1,0 +1,86 @@
+h2{
+    font-family: "Noto Serif", serif;
+    text-align: center;
+    margin-top: 65px;
+    padding-top: 15px;
+    margin-bottom: 4vh;
+}
+.user-form{
+    background-color: antiquewhite;
+    padding-bottom: 13vh;
+    
+}
+.form-item{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: stretch;
+    border: 1px solid black;
+    margin: 0vh 35vw;
+    padding: 2%;
+    border-radius: 5%;
+    align-content: center;
+    transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 30px 25px -10px rgba(0, 0, 0, 0.15);
+}    
+
+
+.form-item input{
+    margin-top: 1vh;
+    margin-bottom: 3vh;
+    padding: 0.3vh 6.2vw 0.3vh 0.5vw;
+    border-radius: 7px;
+}
+.form-item input::placeholder{
+    text-align: left;
+    font-size: 2.75vh;
+}
+
+.form-item textarea{
+    margin-bottom: 2vh;
+}
+
+.submit-btn{
+    width: 60%;
+    text-align: center;
+    margin: 0vh 5vw;
+    border: 1px solid black;
+    border-radius: 7px;
+    
+}
+
+@media(min-width:420px){
+
+.form-item{
+    margin: 0vh 15vw;
+}
+.submit-btn{
+    width: 60%;
+    text-align: center;
+    margin: 0vh 13vw;
+    border: 1px solid black;
+    border-radius: 7px;
+    
+}
+}
+@media(max-width:786px){
+    .form-item{
+        margin: 0vh 7vw;
+    }
+}
+
+@media(min-width:1024px){
+
+    .form-item{
+        margin: 0vh 35vw;
+    }
+    .submit-btn{
+        width: 60%; 
+        text-align: center;
+        margin: 0vh 5vw;
+        border: 1px solid black;
+        border-radius: 7px;
+        
+    }
+
+}
